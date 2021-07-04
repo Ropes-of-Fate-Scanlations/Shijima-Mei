@@ -19,7 +19,7 @@ client = commands.Bot(command_prefix='m!')
 
 @client.command()
 async def hello(ctx):
-        await ctx.send(f"hello~ {ctx.author.name}.")
+        await ctx.send(f"Hello~ {ctx.author.name}.")
 
 @client.command()
 async def colorpage(ctx):
