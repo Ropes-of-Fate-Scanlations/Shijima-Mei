@@ -62,6 +62,16 @@ async def kitsune(ctx):
     await ctx.send(embed=embed)
 
 @client.command()
+async def dmld(ctx):
+    chosen_image = random.choice(embedlinks.dmld)
+
+    embed = discord.Embed(timestamp=datetime.datetime.utcnow())
+    embed.set_image(url=chosen_image)
+    embed.set_footer(text=f"Requested by : {ctx.author.name}")
+
+    await ctx.send(embed=embed)
+   
+@client.command()
 async def meichan(ctx):
         await ctx.send(random.choice(conv.reponses))
 
